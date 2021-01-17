@@ -6,6 +6,7 @@ var forEach = function (t, o, r) {
 };
 
 var hamburgers = document.querySelectorAll(".hamburger");
+var headerNav = document.querySelectorAll(".header__nav");
 if (hamburgers.length > 0) {
   forEach(hamburgers, function (hamburger) {
     hamburger.addEventListener(

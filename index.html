@@ -16,8 +16,8 @@
     <title>Banconomia</title>
   </head>
   <body>
-    <header>
-      <picture>
+    <header class="header">
+      <picture class="header__logo">
         <source media="(min-width:700px)" srcset="./assets/logo.svg" />
         <img src="./assets/logo-mobile.svg" alt="" />
       </picture>
@@ -26,10 +26,76 @@
           <span class="hamburger-inner"></span>
         </span>
       </button>
+      <nav class="header__nav">
+        <section class="header__nav--user">
+          <span class="header__nav--icon"></span>
+        </section>
+        <ul class="header__nav--menu">
+          <li>Mi perfil</li>
+          <li>Cambiar clave</li>
+          <li>Certificado de productos</li>
+          <li>Cerrar sesión</li>
+        </ul>
+      </nav>
     </header>
-    <main></main>
-    <footer>
-      Creado por @ItsCrisDiaz
+    <main class="main">
+      <aside class="main__menu"></aside>
+      <section class="main__card--slider">
+        <article class="main__card--savings">
+          <h2 class="main__card--title">
+            <span class="main__card--savings__icon"></span>Cuenta de ahorros
+          </h2>
+          <h3 class="main__card--subtitle">
+            Número <span>**********1245</span>
+          </h3>
+          <p>Saldo en cuenta:</p>
+          <p><span>$</span> 850.000</p>
+          <section>
+            <h3>Movimientos más recientes</h3>
+            <div class="main__card--savings--grid">
+              <div>Concepto</div>
+              <div>$0.00</div>
+              <div>Concepto</div>
+              <div>$0.00</div>
+              <div>Concepto</div>
+              <div>$0.00</div>
+              <div>Concepto</div>
+              <div>$0.00</div>
+            </div>
+          </section>
+          <button>Ver movimiento</button>
+        </article>
+        <article class="main__card--cc">
+          <h2 class="main__card--title">
+            <span class="main__card--cc__icon"></span>Tarjeta de crédito
+          </h2>
+          <div class="main__card-cc--bar"></div>
+          <p><span>$</span> 2.400.00</p>
+          <div class="main__card--savings--grid">
+            <div>Concepto</div>
+            <div>$0.00</div>
+            <div>Concepto</div>
+            <div>$0.00</div>
+            <div>Concepto</div>
+            <div>$0.00</div>
+            <div>Concepto</div>
+            <div>$0.00</div>
+          </div>
+          <button>Ver movimiento</button>
+        </article>
+        <article class="main__card--investing"></article>
+        <article class="main__card"></article>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Creado por
+        <strong
+          ><a href="https://twitter.com/ItsCrisDiaz" target="_blank"
+            >@ItsCrisDiaz</a
+          ></strong
+        >
+      </p>
     </footer>
     <script type="text/javascript" src="./index.js"></script>
   </body>
