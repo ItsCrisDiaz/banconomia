@@ -195,10 +195,24 @@ body {
   grid-template-columns: 70% 30%;
 }
 
-.main__card--slider article:nth-of-type(1),
-.main__card--slider article:nth-of-type(3),
-.main__card--slider article:nth-of-type(4) {
+.main__card--slider article:nth-of-type(4),
+.main__card--slider article:nth-of-type(2),
+.main__card--slider article:nth-of-type(3) {
   display: none;
+}
+
+.main__card--investing__history {
+  width: 90%;
+}
+
+.main__card--investing__history figure {
+  text-align: center;
+}
+
+.main__card--investing__history figure img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Fin de propiedades de **main** */
