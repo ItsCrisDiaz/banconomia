@@ -1,3 +1,5 @@
+// Burger button
+
 var forEach = function (t, o, r) {
   if ("[object Object]" === Object.prototype.toString.call(t))
     for (var c in t)
@@ -18,6 +20,8 @@ if (hamburgers.length > 0) {
     );
   });
 }
+
+// Slider
 
 if (document.documentElement.clientWidth < 900) {
   var slideIndex = 1;
