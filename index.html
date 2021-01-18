@@ -41,7 +41,7 @@
     <main class="main">
       <aside class="main__menu"></aside>
       <section class="main__card--slider">
-        <article class="main__card--savings">
+        <article class="main__card--savings slider">
           <section class="main__card--title">
             <span class="main__card--savings__icon"></span>
             <div class="main__card--title-container">
@@ -49,7 +49,7 @@
               <p>********1245</p>
             </div>
           </section>
-          <p class="main__card--savings-amount"><span>$</span> 850.000</p>
+          <p class="main__card--total-amount"><span>$</span> 850.000</p>
           <section class="main__card--table">
             <h3 class="main__card--table-title">Movimientos más recientes</h3>
             <div class="main__card--detail--grid">
@@ -109,7 +109,7 @@
             </div>
           </section>
         </article>
-        <article class="main__card--cc">
+        <article class="main__card--cc slider">
           <section class="main__card--title">
             <span class="main__card--cc__icon"></span>
             <div class="main__card--title-container">
@@ -118,81 +118,83 @@
             </div>
           </section>
           <div class="main__card-cc--bar"></div>
-          <p class="main__card--savings-amount"><span>$</span> 2'400.000</p>
+          <p class="main__card--total-amount"><span>$</span> 2'400.000</p>
           <section class="main__card--table">
             <h3 class="main__card--table-title">Movimientos más recientes</h3>
             <div class="main__card--detail--grid">
               <div class="main__card--detail">
                 <p class="main__card--detail-date">Enero 17 2021</p>
-                <p class="main__card--detail-concept">Pago tarjeta crédito</p>
+                <p class="main__card--detail-concept">Pago automático</p>
               </div>
               <div class="main__card--amount">
-                <p class="main__card--amount-credit">
+                <p class="main__card--amount-debit">
                   $950.000,<span class="main__card-detail-cents">00</span>
                 </p>
               </div>
               <div class="main__card--detail">
-                <p class="main__card--detail-date">Enero 16 2021</p>
-                <p class="main__card--detail-concept">
-                  Consignación en corresponsal bancario
-                </p>
-              </div>
-              <div class="main__card--amount">
-                <p class="main__card--amount-debit">
-                  $2.400.000,<span class="main__card-detail-cents">00</span>
-                </p>
-              </div>
-              <div class="main__card--detail">
                 <p class="main__card--detail-date">Enero 15 2021</p>
                 <p class="main__card--detail-concept">
-                  Transferencia bancaria
+                  Paypal ** Gumroad
                 </p>
               </div>
               <div class="main__card--amount">
                 <p class="main__card--amount-credit">
-                  $500.000,<span class="main__card-detail-cents">00</span>
+                  $25.000,<span class="main__card-detail-cents">00</span>
                 </p>
               </div>
               <div class="main__card--detail">
-                <p class="main__card--detail-date">Enero 15 2021</p>
+                <p class="main__card--detail-date">Enero 13 2021</p>
                 <p class="main__card--detail-concept">
-                  Transferencia bancaria
+                  Almacenes Éxito
                 </p>
               </div>
               <div class="main__card--amount">
                 <p class="main__card--amount-credit">
-                  $600.000,<span class="main__card-detail-cents">00</span>
+                  $450.000,<span class="main__card-detail-cents">00</span>
                 </p>
               </div>
               <div class="main__card--detail">
-                <p class="main__card--detail-date">Enero 14 2021</p>
+                <p class="main__card--detail-date">Enero 12 2021</p>
                 <p class="main__card--detail-concept">
-                  Intereses bancarios
+                  Movistar
                 </p>
               </div>
               <div class="main__card--amount">
-                <p class="main__card--amount-debit">
-                  $250,<span class="main__card-detail-cents">00</span>
+                <p class="main__card--amount-credit">
+                  $150.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 10 2021</p>
+                <p class="main__card--detail-concept">
+                  Paypal ** Gumroad
+                </p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-credit">
+                  $20.000,<span class="main__card-detail-cents">00</span>
                 </p>
               </div>
             </div>
-          <button>Ver movimiento</button>
         </article>
-        <article class="main__card--investing">
-          <h2 class="main__card--title">
-            <span class="main__card--investing__icon"></span>Portafolio de
-            inversiones
-          </h2>
+        <article class="main__card--investing slider">
+          <section class="main__card--title">
+            <span class="main__card--investing__icon"></span>
+            <div class="main__card--title-container">
+              <h3>Portafolio de inversiones</h3>
+            </div>
+          </section>
           <section class="main__card--investing__history">
             <h3>Tesla. Inc (TSLA)</h3>
             <figure>
               <img src="./assets/img/Tesla-investment.png" alt="" />
               <figcaption>
-                826.16
+                <strong>$826.16 USD</strong>
                 <span class="main__card--investing__value--decrease"
-                  >-18.84(-2.23%)</span
+                  > -18.84(-2.23%)</span
                 >
-                <span class="main__card--investing__date">Jan-15-2021</span>
+                <br>
+                <span class="main__card--investing__date"><strong>Actualizado a:</strong> Ene-17-2021</span>
               </figcaption>
             </figure>
           </section>
@@ -201,24 +203,30 @@
             <figure>
               <img src="./assets/img/Bitcoin-investment.png" alt="" />
               <figcaption>
-                35,718.41<span
+                <strong>$35,718.41 USD</strong><span
                   span
                   class="main__card--investing__value--increase"
-                  >+717.7422 (+2.0507%)</span
+                  > +717.7422 (+2.0507%)</span
                 >
-                <span class="main__card--investing__date">Jan-15-2021</span>
+                <br>
+                <span class="main__card--investing__date"><strong>Actualizado a:</strong> Ene-17-2021</span>
               </figcaption>
             </figure>
           </section>
         </article>
-        <article class="main__card--other">
-          <h2 class="main__card--title">
-            <span class="main__card--other__icon"></span>Otras opciones
-          </h2>
+        <article class="main__card--other slider">
+          <section class="main__card--title">
+            <span class="main__card--other__icon"></span>
+            <div class="main__card--title-container">
+              <h3>Otros servicios</h3>
+            </div>
+          </section>
           <button>Seguro de vida</button>
           <button>Solicitar crédito inmediato</button>
           <button>Certificados tributarios</button>
         </article>
+        <button class="slider-button slider-black slider-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
+          <button class="slider-button slider-black slider-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
       </section>
     </main>
     <footer class="footer">

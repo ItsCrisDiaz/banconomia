@@ -167,7 +167,6 @@ body {
 .main {
   height: calc(100vh - var(--header-height) - 10px);
   width: 100vw;
-  background-color: white;
 }
 
 .main__menu {
@@ -181,6 +180,8 @@ body {
   height: 100%;
   width: 100%;
   min-width: 320px;
+  background-color: #fffbfa;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23006d77' fill-opacity='0.18'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .main__card--slider article {
@@ -229,7 +230,7 @@ body {
   font-weight: lighter;
 }
 
-.main__card--savings-amount {
+.main__card--total-amount {
   margin-bottom: 20px;
   font-weight: bold;
   text-align: center;
@@ -237,7 +238,7 @@ body {
   font-size: 3rem;
 }
 
-.main__card--savings-amount span {
+.main__card--total-amount span {
   font-size: 1.2rem;
   vertical-align: 12px;
   color: var(--emphasis-color);
@@ -324,24 +325,77 @@ body {
   background-size: cover;
 }
 
-.main__card--slider article:nth-of-type(4),
-.main__card--slider article:nth-of-type(3),
-.main__card--slider article:nth-of-type(1) {
-  display: none;
+.main__card-cc--bar {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--emphasis-color-2);
+  background: linear-gradient(
+    90deg,
+    var(--emphasis-color-2) 0%,
+    var(--background-1) 22%,
+    var(--emphasis-color) 100%
+  );
+  background-color: var(--emphasis-color-2);
+}
+
+.main__card--investing__icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(../assets/icons/investing.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .main__card--investing__history {
   width: 90%;
+  margin: 0 auto;
+}
+
+.main__card--investing__history h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: var(--font-titles);
+  margin-bottom: 5px;
 }
 
 .main__card--investing__history figure {
-  text-align: center;
+  justify-self: center;
+  margin-bottom: 15px;
+}
+
+.main__card--investing__history figcaption {
+  padding-top: 5px;
+}
+
+.main__card--investing__value--decrease {
+  color: red;
+}
+
+.main__card--investing__value--increase {
+  color: green;
+}
+
+.main__card--investing__date {
+  background-color: var(--emphasis-color-2);
+  line-height: 1.4rem;
+  padding: 1px 5px;
+  border-radius: 2px;
 }
 
 .main__card--investing__history figure img {
   width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+.main__card--other__icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(../assets/icons/other.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Fin de propiedades de **main** */
