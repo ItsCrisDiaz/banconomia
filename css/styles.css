@@ -398,6 +398,42 @@ body {
   background-size: cover;
 }
 
+.slider-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 10px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.slider-display-left {
+  border-radius: 5px 2px 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(-0%, -50%);
+}
+.slider-display-right {
+  border-radius: 2px 5px 5px 2px;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+}
+
+.slider-color {
+  color: var(--background-1);
+  background-color: var(--secondary-color);
+}
+
 /* Fin de propiedades de **main** */
 
 /* Inicio de propiedades de **footer** */
