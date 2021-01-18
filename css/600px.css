@@ -1,0 +1,18 @@
+@media screen and (min-width: 600px) {
+  .slider-button {
+    display: none;
+  }
+
+  .main__card--slider {
+    overflow-x: scroll;
+    justify-content: left;
+  }
+
+  .main__card--slider article {
+    margin-right: 100px;
+  }
+
+  .main__card--slider article:nth-of-type(1) {
+    margin-left: 100px;
+  }
+}
