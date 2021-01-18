@@ -5,6 +5,8 @@
   --background-2: #f9ffff;
   --emphasis-color: #e29578;
   --emphasis-color-2: #ffddd2;
+  --emphasis-color-3: #013bda;
+  --emphasis-color-4: #1340bb;
   --black-text: #140804;
   --text-color-2: #f5edea;
   --font-titles: "Josefin Sans", sans-serif;
@@ -18,6 +20,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: var(--font-default);
+  color: var(--black-text);
 }
 
 html {
@@ -184,20 +187,146 @@ body {
   width: 80%;
   min-width: 256px;
   height: 80%;
+  padding: 15px;
   min-height: 424px;
   border-radius: 10px;
   background-color: var(--background-2);
   box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.1);
 }
 
-.main__card--savings--grid {
+.main__card--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.main__card--savings__icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(../assets/icons/savings.svg);
+  fill: var(--secondary-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main__card--title-container h3,
+.main__card--title-container p {
+  font-family: var(--font-titles);
+  text-align: end;
+}
+
+.main__card--title-container h3 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: bold;
+  color: var(--emphasis-color);
+}
+
+.main__card--title-container p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.main__card--savings-amount {
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--emphasis-color-3);
+  font-size: 3rem;
+}
+
+.main__card--savings-amount span {
+  font-size: 1.2rem;
+  vertical-align: 12px;
+  color: var(--emphasis-color);
+}
+
+.main__card--table-title {
+  font-size: 1.4rem;
+  font-family: var(--font-titles);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.main__card--detail--grid {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 0.65fr 0.35fr;
+  column-gap: 5px;
+  width: 100%;
+}
+
+.main__card--detail,
+.main__card--amount {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--emphasis-color-2);
+}
+
+.main__card--detail:nth-of-type(1),
+.main__card--amount:nth-of-type(2) {
+  border-top: 1px solid var(--emphasis-color-2);
+}
+
+.main__card--detail-date {
+  font-family: var(--font-titles);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.main__card--detail-concept {
+  font-size: 1.2rem;
+}
+
+.main__card--amount {
+  display: flex;
+  text-align: right;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.main__card--amount p {
+  width: 100%;
+  text-align: right;
+}
+
+.main__card--amount-debit,
+.main__card--amount-debit span {
+  color: var(--emphasis-color-4);
+  font-weight: bold;
+}
+
+.main__card--amount-credit {
+  font-weight: bold;
+}
+
+.main__card--amount-credit:before {
+  content: "(";
+}
+
+.main__card--amount-credit:after {
+  content: ")";
+}
+
+.main__card--amount-credit span,
+.main__card--amount-debit span {
+  font-size: 0.9rem;
+}
+
+.main__card--cc__icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(../assets/icons/card.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .main__card--slider article:nth-of-type(4),
-.main__card--slider article:nth-of-type(2),
-.main__card--slider article:nth-of-type(3) {
+.main__card--slider article:nth-of-type(3),
+.main__card--slider article:nth-of-type(1) {
   display: none;
 }
 
@@ -225,8 +354,11 @@ body {
   justify-content: center;
   height: var(--footer-height);
   background-color: var(--secondary-color);
-  color: var(--text-color-2);
   font-size: 1.4rem;
+}
+
+.footer p {
+  color: var(--text-color-2);
 }
 
 .footer a {
