@@ -13,33 +13,40 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="./assets/img/logo-mobile.svg">
     <title>Banconomia</title>
   </head>
   <body>
     <header class="header">
       <picture class="header__logo">
-        <source media="(min-width:700px)" srcset="./assets/logo.svg" />
-        <img src="./assets/logo-mobile.svg" alt="" />
+        <source media="(min-width:700px)" srcset="./assets/img/logo.svg" />
+        <img src="./assets/img/logo-mobile.svg" alt="Logo de Banconomia" />
       </picture>
       <button class="hamburger hamburger--spring" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
-      <nav class="header__nav">
-        <section class="header__nav--user">
-          <span class="header__nav--icon"></span>
-        </section>
-        <ul class="header__nav--menu">
-          <li>Mi perfil</li>
-          <li>Cambiar clave</li>
-          <li>Certificado de productos</li>
-          <li>Cerrar sesión</li>
-        </ul>
-      </nav>
     </header>
     <main class="main">
-      <aside class="main__menu"></aside>
+      <aside class="main__menu">
+        <section class="main__menu--header">
+          <span class="main__menu--icon"></span>
+          <div class="main-menu--user-container">
+            <p class="main__menu--user-name">Bienvenido, <span>Cristian</span></p>
+            <p class="main__menu--user-date"><strong>Última fecha de entrada: </strong>17 de Enero de 2021, 02:45 PM</p>
+          </div>
+        </section>
+        <section class="main__menu--options">
+          <ul>
+            <li><a href="#">Mi perfil</a></li>
+            <li><a href="#">Cambiar clave</a></li>
+            <li><a href="#">Certificados de productos</a></li>
+            <li><a href="#">Puntos de contacto</a></li>
+            <li><a href="#">Cerrar sesión</a></li>
+          </ul>
+        </section>
+      </aside>
       <section class="main__card--slider">
         <article class="main__card--savings slider">
           <section class="main__card--title">
@@ -187,7 +194,7 @@
           <section class="main__card--investing__history">
             <h3>Tesla. Inc (TSLA)</h3>
             <figure>
-              <img src="./assets/img/Tesla-investment.png" alt="" />
+              <img src="./assets/img/Tesla-investment.png" alt="Gráfico de cambio de la acción de Tesla" />
               <figcaption>
                 <strong>$826.16 USD</strong>
                 <span class="main__card--investing__value--decrease"
@@ -201,7 +208,7 @@
           <section class="main__card--investing__history">
             <h3>Bitcoin USD (BTC-USD)</h3>
             <figure>
-              <img src="./assets/img/Bitcoin-investment.png" alt="" />
+              <img src="./assets/img/Bitcoin-investment.png" alt="Gráfico de cambio del valor de Bitcoin" />
               <figcaption>
                 <strong>$35,718.41 USD</strong><span
                   span
