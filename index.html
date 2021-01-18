@@ -22,14 +22,14 @@
         <source media="(min-width:700px)" srcset="./assets/img/logo.svg" />
         <img src="./assets/img/logo-mobile.svg" alt="Logo de Banconomia" />
       </picture>
-      <button class="hamburger hamburger--spring" type="button">
+      <button class="hamburger hamburger--spring" type="button" onclick="changeClass()">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
     </header>
     <main class="main">
-      <aside class="main__menu">
+      <aside class="main__menu" id="burger-menu">
         <section class="main__menu--header">
           <span class="main__menu--icon"></span>
           <div class="main__menu--user-container">

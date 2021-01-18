@@ -8,7 +8,6 @@ var forEach = function (t, o, r) {
 };
 
 var hamburgers = document.querySelectorAll(".hamburger");
-var headerNav = document.querySelectorAll(".header__nav");
 if (hamburgers.length > 0) {
   forEach(hamburgers, function (hamburger) {
     hamburger.addEventListener(
@@ -23,7 +22,7 @@ if (hamburgers.length > 0) {
 
 // Slider
 
-if (document.documentElement.clientWidth < 900) {
+if (document.documentElement.clientWidth < 600) {
   var slideIndex = 1;
   showDivs(slideIndex);
 
@@ -45,4 +44,11 @@ if (document.documentElement.clientWidth < 900) {
     }
     x[slideIndex - 1].style.display = "block";
   }
+}
+
+// Menu en mobile
+
+function changeClass() {
+  let siteNav = document.getElementById("burger-menu");
+  siteNav.classList.toggle("menu-open");
 }
