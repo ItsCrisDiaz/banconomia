@@ -454,6 +454,10 @@ body {
   width: 100%;
 }
 
+.main__card--balance {
+  display: none;
+}
+
 .main__card--amount p {
   width: 100%;
   text-align: right;
@@ -635,9 +639,11 @@ body {
   height: var(--modal-header-height);
   width: 80%;
   background-color: var(--secondary-color);
+  border-radius: 5px 5px 0 0;
 }
 
 .main__modal--header h3 {
+  font-family: var(--font-titles);
   font-size: 1.4rem;
   color: var(--background-1);
 }
@@ -650,6 +656,13 @@ body {
   height: calc(80vh - var(--modal-footer-height) - var(--modal-header-height));
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+  overflow-y: scroll;
+}
+
+.main__modal--body-text {
+  text-align: center;
+  margin-top: 25px;
+  font-weight: bold;
 }
 
 .main__modal--footer {
@@ -660,13 +673,14 @@ body {
   margin: 0 auto 10vh;
   height: var(--modal-footer-height);
   background-color: var(--secondary-color);
+  border-radius: 0 0 5px 5px;
 }
 
 /* The Close Button */
 .close {
   color: var(--background-1);
   float: right;
-  font-size: 28px;
+  font-size: 2.8rem;
   font-weight: bold;
 }
 
