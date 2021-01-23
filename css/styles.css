@@ -1,3 +1,4 @@
+/* Inicio variables */
 :root {
   --main-color: #83c5be;
   --secondary-color: #006d77;
@@ -15,6 +16,9 @@
   --footer-height: 40px;
 }
 
+/* Fin de variables */
+
+/* Inicio de configuración universal */
 * {
   padding: 0;
   margin: 0;
@@ -33,23 +37,28 @@ body {
   height: 100vh;
 }
 
+/* Fin de configuración universal */
+
 /* Inicio de propiedades de **header** */
 
+/* Configuración general de header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: var(--header-height);
   background-color: var(--background-1);
+  /* Background hexagonal */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='40' viewBox='0 0 50 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23006d77' fill-opacity='0.15'%3E%3Cpath d='M40 10L36.67 0h-2.11l3.33 10H20l-2.28 6.84L12.11 0H10l6.67 20H10l-2.28 6.84L2.11 10 5.44 0h-2.1L0 10l6.67 20-3.34 10h2.11l2.28-6.84L10 40h20l2.28-6.84L34.56 40h2.1l-3.33-10H40l2.28-6.84L47.89 40H50l-6.67-20L50 0h-2.1l-5.62 16.84L40 10zm1.23 10l-2.28-6.84L34 28h4.56l2.67-8zm-10.67 8l-2-6h-9.12l2 6h9.12zm-12.84-4.84L12.77 38h15.79l2.67-8H20l-2.28-6.84zM18.77 20H30l2.28 6.84L37.23 12H21.44l-2.67 8zm-7.33 2H16l-4.95 14.84L8.77 30l2.67-8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .header__logo {
   padding-left: 15px;
 }
+/* Fin de configuración general de header */
 
-/* Hamburger button  */
-
+/* Configuración de Hamburger button  */
+/* Container del hamburger button  */
 .hamburger {
   padding: 5px 5px;
   display: inline-block;
@@ -71,6 +80,7 @@ body {
 .hamburger.is-active:hover {
   opacity: 0.7;
 }
+/* Configuración de las líneas del hamburger button  */
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
@@ -89,6 +99,7 @@ body {
   outline: none;
 }
 
+/* Dibujar las líneas del hamburger button */
 .hamburger-inner {
   display: block;
   top: 50%;
@@ -118,6 +129,7 @@ body {
   bottom: -10px;
 }
 
+/* Configuración de la animación del hamburger button (Spring) | -is active desactivado */
 .hamburger--spring .hamburger-inner {
   top: 2px;
   transition: background-color 0s 0.13s linear;
@@ -133,6 +145,7 @@ body {
     transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
+/* Configuración de la animación del hamburger button (Spring) | -is active activado */
 .hamburger--spring.is-active .hamburger-inner {
   transition-delay: 0.22s;
   background-color: transparent;
@@ -149,27 +162,20 @@ body {
     transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: translate3d(0, 10px, 0) rotate(-45deg);
 }
-
 /* Fin hamburger button */
-
-.header__nav {
-  display: none;
-}
-
-.header__nav .is-active {
-  display: inline-block;
-}
 
 /* Fin de propiedades de **header** */
 
 /* Inicio de propiedades de **main** */
-
+/* Inicio configuración general de main  */
 .main {
   position: relative;
   height: calc(100vh - var(--header-height) - var(--footer-height));
   width: 100vw;
 }
+/* Fin configuración general de main */
 
+/* Inicio de configuración de menú */
 .main__menu {
   position: absolute;
   width: 100vw;
@@ -236,6 +242,7 @@ body {
   padding-bottom: 1rem;
 }
 
+/* Configuración de animación de links del menú */
 .main__menu--options a {
   position: relative;
   color: var(--text-color-2);
@@ -259,7 +266,10 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+/* Fin de configuración de animación de links del menú */
+/* Fin de configuración de menú */
 
+/* Configuración de slider */
 .main__card--slider {
   display: flex;
   justify-content: center;
@@ -268,9 +278,13 @@ body {
   width: 100%;
   min-width: 320px;
   background-color: #fffbfa;
+  /* Fondo rectangular */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23006d77' fill-opacity='0.18'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
+/* Fin de configuración de slider */
 
+/* Configuración de tarjetas de productos */
+/* Configuración general */
 .main__card--slider article {
   width: 80%;
   min-width: 256px;
@@ -291,16 +305,6 @@ body {
   margin-bottom: 15px;
 }
 
-.main__card--savings__icon {
-  width: 50px;
-  height: 50px;
-  background-image: url(../assets/icons/savings.svg);
-  fill: var(--secondary-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 .main__card--title-container h3,
 .main__card--title-container p {
   font-family: var(--font-titles);
@@ -318,6 +322,66 @@ body {
   font-size: 1.2rem;
   font-weight: lighter;
 }
+/* Fin de configuración general */
+
+/* Inicio de configuración de botones */
+.main__card--button-container {
+  width: 80%;
+  margin: 15px auto 0;
+}
+
+.main__card--button {
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--background-2);
+  outline: none;
+  margin-bottom: 20px;
+  padding: 12px 40px 10px;
+  position: relative;
+  width: 100%;
+  font-family: var(--font-titles);
+  font-weight: bold;
+}
+.main__card--button:before,
+.main__card--button:after {
+  border: 0 solid transparent;
+  transition: all 0.25s;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+.main__card--button:before {
+  border-top: 2px solid var(--main-color);
+  left: 0px;
+  top: -5px;
+}
+
+.main__card--button:after {
+  border-bottom: 2px solid var(--main-color);
+  bottom: -5px;
+  right: 0px;
+}
+.main__card--button:hover {
+  background-color: var(--secondary-color);
+}
+.main__card--button:hover:before,
+.main__card--button:hover:after {
+  height: 100%;
+  width: 100%;
+}
+/* Fin de configuración de botones */
+
+/* Configuración de tarjeta de ahorros */
+.main__card--savings__icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(../assets/icons/savings.svg);
+  fill: var(--secondary-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 .main__card--total-amount {
   margin-bottom: 20px;
@@ -333,6 +397,7 @@ body {
   color: var(--emphasis-color);
 }
 
+/* Grid de tarjeta de cuenta de ahorros y tarjeta de crédito */
 .main__card--table-title {
   font-size: 1.4rem;
   font-family: var(--font-titles);
@@ -405,7 +470,8 @@ body {
 .main__card--amount-debit span {
   font-size: 0.9rem;
 }
-
+/* Fin de configuración de propiedades de tarjeta de cuenta de ahorros  */
+/* Configuración de tarjeta de credit card */
 .main__card--cc__icon {
   width: 50px;
   height: 50px;
@@ -428,6 +494,8 @@ body {
   background-color: var(--emphasis-color-2);
 }
 
+/* Fin de configuración de tarjeta de credit card */
+/* Configuración de tarjeta de inversiones */
 .main__card--investing__icon {
   width: 50px;
   height: 50px;
@@ -478,8 +546,9 @@ body {
   display: block;
   margin: 0 auto;
 }
+/* Configuración de tarjeta de inversiones */
 
-.main__card--other__icon {
+* Configuración de tarjeta de otros */ .main__card--other__icon {
   width: 50px;
   height: 50px;
   background-image: url(../assets/icons/other.svg);
@@ -487,7 +556,10 @@ body {
   background-position: center;
   background-size: cover;
 }
+/* Fin de configuración de tarjeta de otros */
+/* Fin de configuración de tarjetas */
 
+/* Configuración de botones de slider */
 .slider-button {
   border: none;
   display: inline-block;
@@ -523,56 +595,10 @@ body {
   color: var(--background-1);
   background-color: var(--secondary-color);
 }
-
-.main__card--button-container {
-  width: 80%;
-  margin: 15px auto 0;
-}
-
-.main__card--button {
-  background-color: var(--secondary-color);
-  border: none;
-  color: var(--background-2);
-  outline: none;
-  margin-bottom: 20px;
-  padding: 12px 40px 10px;
-  position: relative;
-  width: 100%;
-  font-family: var(--font-titles);
-  font-weight: bold;
-}
-.main__card--button:before,
-.main__card--button:after {
-  border: 0 solid transparent;
-  transition: all 0.25s;
-  content: "";
-  height: 24px;
-  position: absolute;
-  width: 24px;
-}
-.main__card--button:before {
-  border-top: 2px solid var(--main-color);
-  left: 0px;
-  top: -5px;
-}
-.main__card--button:after {
-  border-bottom: 2px solid var(--main-color);
-  bottom: -5px;
-  right: 0px;
-}
-.main__card--button:hover {
-  background-color: var(--secondary-color);
-}
-.main__card--button:hover:before,
-.main__card--button:hover:after {
-  height: 100%;
-  width: 100%;
-}
-
+/* Fin de configuración de botones de slider */
 /* Fin de propiedades de **main** */
 
 /* Inicio de propiedades de **footer** */
-
 .footer {
   display: flex;
   align-items: center;
@@ -590,3 +616,4 @@ body {
   text-decoration: none;
   color: var(--text-color-2);
 }
+/* Fin de propiedades de **footer** */
