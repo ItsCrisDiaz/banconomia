@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="./assets/img/logo-mobile.svg">
+    <link rel="icon" href="./assets/img/logo-mobile.svg" />
     <link rel="stylesheet" href="./css/600px.css" media="(min-width: 600px)" />
     <link rel="stylesheet" href="./css/900px.css" media="(min-width: 900px)" />
     <title>Banconomia</title>
@@ -24,7 +24,11 @@
         <source media="(min-width:700px)" srcset="./assets/img/logo.svg" />
         <img src="./assets/img/logo-mobile.svg" alt="Logo de Banconomia" />
       </picture>
-      <button class="hamburger hamburger--spring" type="button" onclick="changeClass()">
+      <button
+        class="hamburger hamburger--spring"
+        type="button"
+        onclick="changeClass()"
+      >
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
@@ -35,8 +39,13 @@
         <section class="main__menu--header">
           <span class="main__menu--icon"></span>
           <div class="main__menu--user-container">
-            <p class="main__menu--user-name">Bienvenido, <span><strong>Cristian</strong></span></p>
-            <p class="main__menu--user-date"><strong>Última fecha de entrada: </strong>17 de Enero de 2021, 02:45 PM</p>
+            <p class="main__menu--user-name">
+              Bienvenido, <span><strong>Cristian</strong></span>
+            </p>
+            <p class="main__menu--user-date">
+              <strong>Última fecha de entrada: </strong>17 de Enero de 2021,
+              02:45 PM
+            </p>
           </div>
         </section>
         <section class="main__menu--options">
@@ -106,18 +115,10 @@
                   $600.000,<span class="main__card-detail-cents">00</span>
                 </p>
               </div>
-              <div class="main__card--detail">
-                <p class="main__card--detail-date">Enero 14 2021</p>
-                <p class="main__card--detail-concept">
-                  Intereses bancarios
-                </p>
-              </div>
-              <div class="main__card--amount">
-                <p class="main__card--amount-debit">
-                  $250,<span class="main__card-detail-cents">00</span>
-                </p>
-              </div>
             </div>
+          </section>
+          <section class="main__card--button-container">
+            <button class="main__card--button">Consultar movimientos</button>
           </section>
         </article>
         <article class="main__card--cc slider">
@@ -175,18 +176,11 @@
                   $150.000,<span class="main__card-detail-cents">00</span>
                 </p>
               </div>
-              <div class="main__card--detail">
-                <p class="main__card--detail-date">Enero 10 2021</p>
-                <p class="main__card--detail-concept">
-                  Paypal ** Gumroad
-                </p>
-              </div>
-              <div class="main__card--amount">
-                <p class="main__card--amount-credit">
-                  $20.000,<span class="main__card-detail-cents">00</span>
-                </p>
-              </div>
             </div>
+          </section>
+          <section class="main__card--button-container">
+            <button class="main__card--button">Consultar movimientos</button>
+          </section>
         </article>
         <article class="main__card--investing slider">
           <section class="main__card--title">
@@ -198,29 +192,38 @@
           <section class="main__card--investing__history">
             <h3>Tesla. Inc (TSLA)</h3>
             <figure>
-              <img src="./assets/img/Tesla-investment.png" alt="Gráfico de cambio de la acción de Tesla" />
+              <img
+                src="./assets/img/Tesla-investment.png"
+                alt="Gráfico de cambio de la acción de Tesla"
+              />
               <figcaption>
                 <strong>$826.16 USD</strong>
-                <span class="main__card--investing__value--decrease"
-                  > -18.84(-2.23%)</span
+                <span class="main__card--investing__value--decrease">
+                  -18.84(-2.23%)</span
                 >
-                <br>
-                <span class="main__card--investing__date"><strong>Actualizado a:</strong> Ene-17-2021</span>
+                <br />
+                <span class="main__card--investing__date"
+                  ><strong>Actualizado a:</strong> Ene-17-2021</span
+                >
               </figcaption>
             </figure>
           </section>
           <section class="main__card--investing__history">
             <h3>Bitcoin USD (BTC-USD)</h3>
             <figure>
-              <img src="./assets/img/Bitcoin-investment.png" alt="Gráfico de cambio del valor de Bitcoin" />
+              <img
+                src="./assets/img/Bitcoin-investment.png"
+                alt="Gráfico de cambio del valor de Bitcoin"
+              />
               <figcaption>
-                <strong>$35,718.41 USD</strong><span
-                  span
-                  class="main__card--investing__value--increase"
-                  > +717.7422 (+2.0507%)</span
+                <strong>$35,718.41 USD</strong
+                ><span span class="main__card--investing__value--increase">
+                  +717.7422 (+2.0507%)</span
                 >
-                <br>
-                <span class="main__card--investing__date"><strong>Actualizado a:</strong> Ene-17-2021</span>
+                <br />
+                <span class="main__card--investing__date"
+                  ><strong>Actualizado a:</strong> Ene-17-2021</span
+                >
               </figcaption>
             </figure>
           </section>
@@ -234,12 +237,27 @@
           </section>
           <section class="main__card--button-container">
             <button class="main__card--button">Seguro de vida</button>
-            <button class="main__card--button">Solicitar crédito inmediato</button>
+            <button class="main__card--button">
+              Solicitar crédito inmediato
+            </button>
             <button class="main__card--button">Certificados tributarios</button>
           </section>
         </article>
-        <button class="slider-button slider-color slider-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
-          <button class="slider-button slider-color slider-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
+        <button
+          class="slider-button slider-color slider-display-left"
+          onclick="plusDivs(-1, 0)"
+        >
+          &#10094;
+        </button>
+        <button
+          class="slider-button slider-color slider-display-right"
+          onclick="plusDivs(1, 0)"
+        >
+          &#10095;
+        </button>
+      </section>
+      <section class="main__modal--container">
+        <article class="main__modal--savings"></article>
       </section>
     </main>
     <footer class="footer">

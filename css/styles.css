@@ -1,17 +1,26 @@
 /* Inicio variables */
 :root {
+  /* Colores principales */
   --main-color: #83c5be;
   --secondary-color: #006d77;
+  /* Colores de background */
   --background-1: #edf6f9;
   --background-2: #f9ffff;
+  /* Colores complementarios - énfasis */
   --emphasis-color: #e29578;
   --emphasis-color-2: #ffddd2;
   --emphasis-color-3: #013bda;
   --emphasis-color-4: #1340bb;
+  /* Colores complementarios - Botones */
+  --button-1: #bd8a2e;
+  --button-2: #d8bf53;
+  /* Colores de texto */
   --black-text: #140804;
   --text-color-2: #f5edea;
+  /* Textos */
   --font-titles: "Josefin Sans", sans-serif;
   --font-default: "Lato", sans-serif;
+  /* Alturas */
   --header-height: 70px;
   --footer-height: 40px;
 }
@@ -331,12 +340,12 @@ body {
 }
 
 .main__card--button {
-  background-color: var(--secondary-color);
+  background-color: var(--button-1);
   border: none;
   color: var(--background-2);
   outline: none;
   margin-bottom: 20px;
-  padding: 12px 40px 10px;
+  padding: 10px 15px;
   position: relative;
   width: 100%;
   font-family: var(--font-titles);
@@ -352,18 +361,18 @@ body {
   width: 24px;
 }
 .main__card--button:before {
-  border-top: 2px solid var(--main-color);
+  border-top: 2px solid var(--button-2);
   left: 0px;
   top: -5px;
 }
 
 .main__card--button:after {
-  border-bottom: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--button-2);
   bottom: -5px;
   right: 0px;
 }
 .main__card--button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--button-1);
 }
 .main__card--button:hover:before,
 .main__card--button:hover:after {
@@ -548,7 +557,8 @@ body {
 }
 /* Configuración de tarjeta de inversiones */
 
-* Configuración de tarjeta de otros */ .main__card--other__icon {
+/* Configuración de tarjeta de otros */
+.main__card--other__icon {
   width: 50px;
   height: 50px;
   background-image: url(../assets/icons/other.svg);
