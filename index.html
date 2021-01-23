@@ -118,7 +118,9 @@
             </div>
           </section>
           <section class="main__card--button-container">
-            <button class="main__card--button">Consultar movimientos</button>
+            <button id="modalSavingsButton" class="main__card--button">
+              Consultar movimientos
+            </button>
           </section>
         </article>
         <article class="main__card--cc slider">
@@ -257,7 +259,59 @@
         </button>
       </section>
       <section class="main__modal--container">
-        <article class="main__modal--savings"></article>
+        <article id="modalSavings" class="main__modal--savings modal">
+          <section class="main__modal--header">
+            <h3>Cuenta de ahorros</h3>
+            <span class="close">&times;</span>
+          </section>
+          <section class="main__modal--body">
+            <div class="main__card--detail--grid">
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 17 2021</p>
+                <p class="main__card--detail-concept">Pago tarjeta crédito</p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-credit">
+                  $950.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 16 2021</p>
+                <p class="main__card--detail-concept">
+                  Consignación en corresponsal bancario
+                </p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-debit">
+                  $2.400.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 15 2021</p>
+                <p class="main__card--detail-concept">
+                  Transferencia bancaria
+                </p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-credit">
+                  $500.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 15 2021</p>
+                <p class="main__card--detail-concept">
+                  Transferencia bancaria
+                </p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-credit">
+                  $600.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="main__modal--footer"></section>
+        </article>
       </section>
     </main>
     <footer class="footer">

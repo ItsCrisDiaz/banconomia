@@ -52,3 +52,42 @@ function changeClass() {
   let siteNav = document.getElementById("burger-menu");
   siteNav.classList.toggle("menu-open");
 }
+
+//modal
+
+//VARIABLES
+var span = document.getElementsByClassName("close")[0]; //Span
+//Savings
+var modalSavings = document.getElementById("modalSavings"); //Modal
+var btnSavings = document.getElementById("modalSavingsButton"); //Button
+
+//CC
+var modalCC = document.getElementById("modalCC"); //Modal
+var btnCC = document.getElementById("modalCCButton"); //Button
+
+//Investing
+var modalInvesting = document.getElementById("modalInvesting"); //Modal
+var btnInvesting = document.getElementById("modalInvestingButton"); //Button
+
+btnSavings.onclick = function () {
+  // When the user clicks on the button, open the modal
+  modalSavings.style.display = "block";
+};
+
+span.onclick = function () {
+  // When the user clicks on <span> (x), close the modal
+  modalSavings.style.display = "none";
+  modalCC.style.display = "none";
+  modalInvesting.style.display = "none";
+};
+
+window.onclick = function (event) {
+  // When the user clicks anywhere outside of the modal, close it
+  if (event.target == modalSavings) {
+    modalSavings.style.display = "none";
+  } else if (event.target == modalCC) {
+    modalCC.style.display = "none";
+  } else if (event.target == modalInvesting) {
+    modalInvesting.style.display = "none";
+  }
+};

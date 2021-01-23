@@ -23,6 +23,8 @@
   /* Alturas */
   --header-height: 70px;
   --footer-height: 40px;
+  --modal-header-height: 40px;
+  --modal-footer-height: 30px;
 }
 
 /* Fin de variables */
@@ -607,6 +609,75 @@ body {
 }
 /* Fin de configuración de botones de slider */
 /* Fin de propiedades de **main** */
+
+/* Inicio de propiedades de **modal** */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.main__modal--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10vh auto 0;
+  padding: 5px 20px;
+  height: var(--modal-header-height);
+  width: 80%;
+  background-color: var(--secondary-color);
+}
+
+.main__modal--header h3 {
+  font-size: 1.4rem;
+  color: var(--background-1);
+}
+
+/* Modal Content/Box */
+.main__modal--body {
+  background-color: var(--background-2);
+  margin: 0 auto; /* 15% from the top and centered */
+  padding: 20px;
+  height: calc(80vh - var(--modal-footer-height) - var(--modal-header-height));
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.main__modal--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto 10vh;
+  height: var(--modal-footer-height);
+  background-color: var(--secondary-color);
+}
+
+/* The Close Button */
+.close {
+  color: var(--background-1);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--black-text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Fin de propiedades de **modal** */
 
 /* Inicio de propiedades de **footer** */
 .footer {
