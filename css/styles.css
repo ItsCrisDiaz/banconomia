@@ -521,7 +521,7 @@ body {
 }
 
 .main__card--investing__history {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -535,6 +535,10 @@ body {
 .main__card--investing__history figure {
   justify-self: center;
   margin-bottom: 15px;
+}
+
+.main__card--investing-img img {
+  width: 100px;
 }
 
 .main__card--investing__history figcaption {
@@ -556,8 +560,8 @@ body {
   border-radius: 2px;
 }
 
-.main__card--investing__history figure img {
-  width: 200px;
+.main__card--investing-img img {
+  width: 75%;
   display: block;
   margin: 0 auto;
 }
@@ -691,6 +695,53 @@ body {
   cursor: pointer;
 }
 
+.main__modal--collapsible {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  background-color: var(--emphasis-color-2);
+  font-family: var(--font-titles);
+  color: var(--black-text);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+.main__modal--collapsible:after {
+  content: "\002B";
+  color: var(--black-text);
+  font-weight: bold;
+  font-size: 1.4rem;
+  float: right;
+}
+
+.collapsible-active,
+.main__modal--collapsible:hover {
+  background-color: var(--emphasis-color);
+}
+
+.main__modal--collapsible .collapsible-active:after {
+  content: "\2212";
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.main__modal--product-section {
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+.main__modal--product-section:not(:last-child) {
+  border-bottom: 2px solid var(--emphasis-color-2);
+}
+
 /* Fin de propiedades de **modal** */
 
 /* Inicio de propiedades de **footer** */
@@ -700,7 +751,7 @@ body {
   justify-content: center;
   height: var(--footer-height);
   background-color: var(--secondary-color);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .footer p {

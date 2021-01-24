@@ -181,7 +181,9 @@
             </div>
           </section>
           <section class="main__card--button-container">
-            <button class="main__card--button">Consultar movimientos</button>
+            <button id="modalCCButton" class="main__card--button">
+              Consultar movimientos
+            </button>
           </section>
         </article>
         <article class="main__card--investing slider">
@@ -194,10 +196,12 @@
           <section class="main__card--investing__history">
             <h3>Tesla. Inc (TSLA)</h3>
             <figure>
-              <img
-                src="./assets/img/Tesla-investment.png"
-                alt="Gráfico de cambio de la acción de Tesla"
-              />
+              <picture class="main__card--investing-img">
+                <img
+                  src="./assets/img/Tesla-investment.png"
+                  alt="Gráfico de cambio de la acción de Tesla"
+                />
+              </picture>
               <figcaption>
                 <strong>$826.16 USD</strong>
                 <span class="main__card--investing__value--decrease">
@@ -213,10 +217,12 @@
           <section class="main__card--investing__history">
             <h3>Bitcoin USD (BTC-USD)</h3>
             <figure>
-              <img
-                src="./assets/img/Bitcoin-investment.png"
-                alt="Gráfico de cambio del valor de Bitcoin"
-              />
+              <picture class="main__card--investing-img">
+                <img
+                  src="./assets/img/Bitcoin-investment.png"
+                  alt="Gráfico de cambio del valor de Bitcoin"
+                />
+              </picture>
               <figcaption>
                 <strong>$35,718.41 USD</strong
                 ><span span class="main__card--investing__value--increase">
@@ -228,6 +234,9 @@
                 >
               </figcaption>
             </figure>
+            <button id="modalInvestingButton" class="main__card--button">
+              Consultar acciones
+            </button>
           </section>
         </article>
         <article class="main__card--other slider">
@@ -380,6 +389,121 @@
             <section class="main__modal--body-text">
               <p>Hemos llegado al final de tus movimientos bancarios</p>
             </section>
+          </section>
+          <section class="main__modal--footer"></section>
+        </article>
+        <article id="modalCC" class="main__modal--cc modal">
+          <section class="main__modal--header">
+            <h3>Tarjeta de crédito</h3>
+            <span class="close">&times;</span>
+          </section>
+          <section class="main__modal--body">
+            <button class="main__modal--collapsible">Movimientos</button>
+            <div class="main__card--detail--grid collapsible-content">
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 17 2021</p>
+                <p class="main__card--detail-concept">Pago automático</p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-debit">
+                  $950.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 15 2021</p>
+                <p class="main__card--detail-concept">
+                  Paypal ** Gumroad
+                </p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-credit">
+                  $25.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 13 2021</p>
+                <p class="main__card--detail-concept">
+                  Almacenes Éxito
+                </p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-credit">
+                  $450.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 12 2021</p>
+                <p class="main__card--detail-concept">
+                  Movistar
+                </p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-credit">
+                  $150.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+              <div class="main__card--detail">
+                <p class="main__card--detail-date">Enero 9 2021</p>
+                <p class="main__card--detail-concept">
+                  Amazon
+                </p>
+              </div>
+              <div class="main__card--amount">
+                <p class="main__card--amount-credit">
+                  $325.000,<span class="main__card-detail-cents">00</span>
+                </p>
+              </div>
+            </div>
+            <button class="main__modal--collapsible">
+              Detalles del producto
+            </button>
+            <section class="main__modal--product-details collapsible-content">
+              <article class="main__modal--product-section">
+                <h3>Numero de producto</h3>
+                <p>**** **** **** 5423</p>
+              </article>
+              <article class="main__modal--product-section">
+                <h3>Cupo total</h3>
+                <p>$2'400.000</p>
+              </article>
+              <article class="main__modal--product-section">
+                <h3>Cupos de avances</h3>
+                <p>$480.000</p>
+              </article>
+              <article class="main__modal--product-section">
+                <h3>Día de corte</h3>
+                <p>24 Diciembre 2020</p>
+              </article>
+            </section>
+          </section>
+          <section class="main__modal--footer"></section>
+        </article>
+        <article id="modalInvesting" class="main__modal--cc modal">
+          <section class="main__modal--header">
+            <h3>Portafolio de servicios</h3>
+            <span class="close">&times;</span>
+          </section>
+          <section class="main__modal--body">
+            <button class="main__modal--collapsible">
+              Acciones adquiridas
+            </button>
+            <section
+              class="main__modal--investing-container collapsible-content"
+            >
+              <div class="main__modal-investing">
+                <h3>Tesla. Inc (TSLA)</h3>
+                <p><strong>Valor de la acción:</strong> $826.16 USD</p>
+                <span class="main__card--investing__value--decrease">
+                  -18.84(-2.23%)</span
+                >
+              </div>
+            </section>
+            <button class="main__modal--collapsible">
+              Acciones sugeridas
+            </button>
+            <section
+              class="main__modal--product-details collapsible-content"
+            ></section>
           </section>
           <section class="main__modal--footer"></section>
         </article>

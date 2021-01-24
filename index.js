@@ -56,28 +56,48 @@ function changeClass() {
 //modal
 
 //VARIABLES
-var span = document.getElementsByClassName("close")[0]; //Span
 //Savings
 var modalSavings = document.getElementById("modalSavings"); //Modal
 var btnSavings = document.getElementById("modalSavingsButton"); //Button
+var modalSavingsSpan = document.getElementsByClassName("close")[0]; //Span
 
 //CC
 var modalCC = document.getElementById("modalCC"); //Modal
 var btnCC = document.getElementById("modalCCButton"); //Button
+var modalCCSpan = document.getElementsByClassName("close")[1]; //Span
 
 //Investing
 var modalInvesting = document.getElementById("modalInvesting"); //Modal
 var btnInvesting = document.getElementById("modalInvestingButton"); //Button
+var modalInvestingSpan = document.getElementsByClassName("close")[2]; //Span
 
 btnSavings.onclick = function () {
   // When the user clicks on the button, open the modal
   modalSavings.style.display = "block";
 };
 
-span.onclick = function () {
+btnCC.onclick = function () {
+  // When the user clicks on the button, open the modal
+  modalCC.style.display = "block";
+};
+
+btnInvesting.onclick = function () {
+  // When the user clicks on the button, open the modal
+  modalInvesting.style.display = "block";
+};
+
+modalSavingsSpan.onclick = function () {
   // When the user clicks on <span> (x), close the modal
   modalSavings.style.display = "none";
+};
+
+modalCCSpan.onclick = function () {
+  // When the user clicks on <span> (x), close the modal
   modalCC.style.display = "none";
+};
+
+modalInvestingSpan.onclick = function () {
+  // When the user clicks on <span> (x), close the modal
   modalInvesting.style.display = "none";
 };
 
@@ -91,3 +111,20 @@ window.onclick = function (event) {
     modalInvesting.style.display = "none";
   }
 };
+
+//collapsible
+
+var coll = document.getElementsByClassName("main__modal--collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function () {
+    this.classList.toggle(".collapsible-active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
