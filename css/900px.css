@@ -12,7 +12,28 @@
   }
 
   .main {
+    position: relative;
     display: grid;
     grid-template-columns: 250px 1fr;
+  }
+
+  .modal {
+    position: absolute;
+    overflow: hidden;
+    width: calc(100% - 250px);
+    height: calc(100%);
+    left: 250px;
+  }
+
+  .main__modal--header {
+    margin: 5% auto 0;
+  }
+
+  .main__modal--footer {
+    margin: 0 auto 5%;
+  }
+
+  .main__modal--body {
+    height: calc(80% - var(--modal-footer-height) - var(--modal-header-height));
   }
 }
