@@ -565,18 +565,52 @@ body {
   display: block;
   margin: 0 auto;
 }
-/* Configuración de tarjeta de inversiones */
-
-/* Configuración de tarjeta de otros */
-.main__card--other__icon {
+/* Fin de configuración de tarjeta de inversiones */
+/* Configuración de tarjeta de préstamos */
+.main__card--loan__icon {
   width: 50px;
   height: 50px;
-  background-image: url(../assets/icons/other.svg);
+  background-image: url(../assets/icons/loan.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-/* Fin de configuración de tarjeta de otros */
+
+.main__card--img {
+  width: 100%;
+}
+
+.main__card--img img {
+  display: block;
+  width: 75%;
+  margin: 0 auto 20px;
+}
+
+.main__card--img p {
+  font-size: 1.2rem;
+}
+/* Fin de configuración de tarjeta de préstamos */
+/* Configuración de tarjeta de seguros */
+.main__card--insurance__icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(../assets/icons/insurance.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Fin de configuración de tarjeta de seguros */
+
+.main__card--cdt__icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(../assets/icons/cdt.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /* Fin de configuración de tarjetas */
 
 /* Configuración de botones de slider */
@@ -759,6 +793,70 @@ body {
 
 .main__modal-investing p:nth-of-type(2) {
   margin-bottom: 15px;
+}
+
+.main__modal-button-container {
+  text-align: center;
+}
+
+.main__modal-button {
+  position: relative;
+  width: 70%;
+  height: 3rem;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  font-family: var(--font-titles);
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.main__modal-button--buy {
+  background-color: var(--emphasis-color-3);
+}
+
+.main__modal-button--sell {
+  background-color: var(--button-1);
+}
+
+.main__modal-button--buy::before {
+  -webkit-clip-path: circle(0% at 50% 50%);
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  opacity: 0.4;
+  background: #1976d2;
+  padding: 18px 0;
+}
+
+.main__modal-button--sell::before {
+  -webkit-clip-path: circle(0% at 50% 50%);
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  opacity: 0.4;
+  background: var(--button-2);
+  padding: 18px 0;
+}
+
+.main__modal-button--buy:hover::before,
+.main__modal-button--sell:hover::before {
+  -webkit-clip-path: circle(100%);
+  opacity: 1;
+}
+
+.button-text {
+  position: relative;
+  color: var(--text-color-2);
 }
 
 /* Fin de propiedades de **modal** */
